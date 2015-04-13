@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="alert alert-warning" role="alert"
+    ng-show="warning">
+    <strong>Warning!</strong> {{warning}}.
+  </div>
+
+  <form style="max-width: 330px;padding: 15px;margin: 0 auto;"
+      ng-submit="signup()">
+    <h2 class="form-signin-heading">Sign Up</h2>
+    <input type="email" name="email" class="form-control" placeholder="Email address" required="" autofocus="" autocomplete="off"
+    ng-model="user.email">
+    <input type="password" name="password" class="form-control" placeholder="Password" required="" autocomplete="off"
+    ng-model="user.password">
+    <input type="password" name="verifyPassword" class="form-control" placeholder="Verify Password" required="" autocomplete="off">
+    <input type="password" name="code" class="form-control" placeholder="Special Code" required="" autocomplete="off"
+    ng-model="user.code">
+    <div class="checkbox"></div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    <br />
+    <a href="#">Log In</a> | <a href="#">Reset Password</a>
+  </form>
+
+</div>

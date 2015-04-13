@@ -1,0 +1,17 @@
+{
+  "name": "admin-frontend",
+  "version": "0.0.1",
+  "description": "Frontend for the gracenotes admin ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gracenotes/admin-frontend.git"
+  },
+  "author": "Adam Carnagey",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-bower": "0.0.10",
+    "gulp-notify": "^2.2.0",
+    "gulp-util": "^2.2.20",
+    "gulp-webserver": "^0.8.1"
+  }
+}
