@@ -1,6 +1,6 @@
 myApp.controller('UsersController',
   function($scope, $rootScope, REST_URL, $location, $http) {
-    $rootScope.active = { "home" : "", "users" : "active" };
+    $rootScope.active = { "home" : "", "users" : "active", "registrations" : "", "courseRequests" : "" };
     $scope.loadData = function() {
 
       //$http.get("/test", config);

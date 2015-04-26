@@ -24,6 +24,7 @@ gulp.task('watch', function() {
 gulp.task('webserver', function() {
   gulp.src('source/')
     .pipe(webserver({
+      fallback: 'index.html',
       livereload: true,
       open: true
     }));

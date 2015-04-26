@@ -5,11 +5,11 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
   $routeProvider.
     when('/login', {
       templateUrl: '/views/login.html',
-      controller: 'RegistrationController'
+      controller: 'SessionController'
     }).
     when('/signup', {
       templateUrl: '/views/signup.html',
-      controller: 'RegistrationController'
+      controller: 'SessionController'
     }).
     when('/users', {
       templateUrl: '/views/users.html',
@@ -23,13 +23,21 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       templateUrl: '/views/profile.html',
       controller: 'ProfileController'
     }).
+    when('/registrations', {
+      templateUrl: '/views/registrations.html',
+      controller: 'RegistrationController'
+    }).
+    when('/courserequests', {
+      templateUrl: '/views/course-requests.html',
+      controller: 'CourseRequestController'
+    }).
     otherwise({
       templateUrl: '/views/login.html',
-      controller: 'RegistrationController'
+      controller: 'SessionController'
     });
 
     // use the HTML5 History API
-    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 }]);
 
 myApp.run(
