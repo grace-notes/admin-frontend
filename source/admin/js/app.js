@@ -3,41 +3,17 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngCookies'])
 
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider.
-    when('/login', {
-      templateUrl: '/views/login.html',
-      controller: 'SessionController'
-    }).
-    when('/signup', {
-      templateUrl: '/views/signup.html',
-      controller: 'SessionController'
-    }).
-    when('/users', {
-      templateUrl: '/views/users.html',
-      controller: 'UsersController'
-    }).
-    when('/home', {
-      templateUrl: '/views/home.html',
-      controller: 'HomeController'
-    }).
-    when('/profile', {
-      templateUrl: '/views/profile.html',
-      controller: 'ProfileController'
-    }).
-    when('/registrations', {
-      templateUrl: '/views/registrations.html',
-      controller: 'RegistrationController'
-    }).
-    when('/courserequests', {
-      templateUrl: '/views/course-requests.html',
-      controller: 'CourseRequestController'
-    }).
-    otherwise({
-      templateUrl: '/views/login.html',
-      controller: 'SessionController'
-    });
+    when('/login', { templateUrl: 'views/login.html', controller: 'SessionController' }).
+    when('/signup', { templateUrl: 'views/signup.html', controller: 'SessionController' }).
+    when('/users', { templateUrl: 'views/users.html', controller: 'UsersController' }).
+    when('/home', { templateUrl: 'views/home.html', controller: 'HomeController' }).
+    when('/profile', { templateUrl: 'views/profile.html', controller: 'ProfileController' }).
+    when('/registrations', { templateUrl: 'views/registrations.html', controller: 'RegistrationController' }).
+    when('/courserequests', { templateUrl: 'views/course-requests.html', controller: 'CourseRequestController' }).
+    otherwise({ templateUrl: 'views/login.html', controller: 'SessionController' });
 
     // use the HTML5 History API
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 }]);
 
 myApp.run(
