@@ -1,5 +1,14 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngCookies'])
-  .constant('REST_URL','http://localhost:8080');
+var myApp = angular
+.module('myApp',
+[
+  'ngRoute',
+  'ngCookies',
+  'ui.grid',
+  'ui.grid.autoResize',
+  'ui.grid.pagination',
+  'ui.bootstrap'
+])
+.constant('REST_URL','http://localhost:8080');
 
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider.
